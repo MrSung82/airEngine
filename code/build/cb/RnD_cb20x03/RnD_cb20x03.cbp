@@ -33,7 +33,24 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="../../../air/inc" />
+			<Add directory="../../../../thirdparty/SDL2/include/SDL2" />
 		</Compiler>
+		<Linker>
+			<Add option="-lmingw32" />
+			<Add option="-lSDL2main" />
+			<Add option="-lSDL2" />
+			<Add option="-lOle32" />
+			<Add option="-lImm32" />
+			<Add option="-lVersion" />
+			<Add option="-lOleAut32" />
+			<Add option="-lGDi32" />
+			<Add option="-lwinmm" />
+			<Add option="-lsetupapi" />
+			<Add option="-ld3d9" />
+			<Add option="-ld3dx9" />
+			<Add directory="../../../../thirdparty/SDL2/lib" />
+		</Linker>
+		<Unit filename="../../../air/src/rnd/rndMain.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
