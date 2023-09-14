@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/thirdparty/SDL2/
+/thirdparty/SDL-release-2.28.3.zip
