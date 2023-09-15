@@ -37,8 +37,10 @@ class DynamicArray
 {
 public:
     using size_type = Size;
+    using value_type = T;
+    
 private:
-    void* m_pMemory{};
+    void* m_pMemory{}; // may be T* the best
     size_type m_size{};
     size_type m_capacity{};
 };

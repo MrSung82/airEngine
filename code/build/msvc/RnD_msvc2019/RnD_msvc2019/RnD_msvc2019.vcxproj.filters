@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="air">
+      <UniqueIdentifier>{2ced0ec5-ab29-48cf-924f-7c22259c1ae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\utl">
+      <UniqueIdentifier>{1b8f4bf2-c0b0-4416-ba3e-3069f492b657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\utl\containers">
+      <UniqueIdentifier>{06f26026-f9f8-4667-a7cc-f6903fb42a36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\utl\containers\Header Files">
+      <UniqueIdentifier>{3ccd3f13-edbb-466a-a8e6-49fd18939f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\platform">
+      <UniqueIdentifier>{c68f535d-13e1-4474-80fa-b0b3bc609bc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\platform\Header Files">
+      <UniqueIdentifier>{0b6b7a6a-0099-49d2-91ba-996a05e8aaf0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RnD_msvc2019.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\air\inc\utl\containers\airDynamicArray.h">
+      <Filter>air\utl\containers\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\air\inc\platform\airBaseTypes.h">
+      <Filter>air\platform\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
