@@ -144,7 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\air\inc\platform\airBaseTypes.h" />
+    <ClInclude Include="..\..\..\..\air\inc\utl\airCommonUtl.h.h" />
+    <ClInclude Include="..\..\..\..\air\inc\utl\airTypeTraits.h" />
     <ClInclude Include="..\..\..\..\air\inc\utl\containers\airDynamicArray.h" />
+    <ClInclude Include="..\..\..\..\air\inc\utl\memory\airMemory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

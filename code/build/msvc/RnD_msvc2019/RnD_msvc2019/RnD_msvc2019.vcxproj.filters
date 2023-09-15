@@ -23,6 +23,15 @@
     <Filter Include="air\platform\Header Files">
       <UniqueIdentifier>{0b6b7a6a-0099-49d2-91ba-996a05e8aaf0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="air\utl\memory">
+      <UniqueIdentifier>{97c662fa-5106-4a11-b701-14758f8c910c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\utl\memory\Header Files">
+      <UniqueIdentifier>{b82644a8-a553-4ecb-a2a9-f4265d8adb4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="air\utl\Header Files">
+      <UniqueIdentifier>{69ad8141-ac49-4f3f-9771-df00841b7113}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RnD_msvc2019.cpp">
@@ -35,6 +44,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\air\inc\platform\airBaseTypes.h">
       <Filter>air\platform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\air\inc\utl\memory\airMemory.h">
+      <Filter>air\utl\memory\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\air\inc\utl\airTypeTraits.h">
+      <Filter>air\utl\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\air\inc\utl\airCommonUtl.h.h">
+      <Filter>air\utl\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
