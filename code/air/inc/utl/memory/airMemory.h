@@ -25,56 +25,39 @@
  *                                                                       *
  *************************************************************************/
 
- /*
-  Purpose: common utils.
+/*
+ Purpose: allocator traits & other memory relative utils like in STL.
 
-  Changes (for serious modifications only):
-  --------
-  09-15-2023: mrsung
-  Description: file h.b. created.
-  -----------
-  Changes end
- */
+ Changes (for serious modifications only): 
+ --------
+ 09-15-2023: mrsung
+ Description: file h.b. created
+ -----------
+ Changes end
+*/
 
 
-#ifndef AIR_UTL_COMMONUTL_H_INCL
-#define AIR_UTL_COMMONUTL_H_INCL
+#ifndef AIR_MEMORY_H_INCL
+#define AIR_MEMORY_H_INCL
 
-#include "utl/airTypeTraits.h"
+#include <memory>
 
 namespace air
 {
-    template<typename...> using Void = void;
 
-    template<typename TDefaultResult, 
-        typename TSfinaeVoid,
-        template<typename...> class TFunction,
-        typename... TArgs>
-    struct DoTypeFunctionImpl : public FalseType
-    {
-        using Result = TDefaultResult;
-    };
-
-    template<typename TDefaultResult,
-        template<typename...> class TFunction,
-        typename... TArgs>
-    struct DoTypeFunctionImpl<TDefaultResult, Void<TFunction<TArgs...>>, TFunction, TArgs...> : public TrueType
-    {
-        using Result = TFunction<TArgs...>;
-    };
-
-    template<typename TDefaultResult,
-        template<typename...> class TFunction,
-        typename... TArgs>
-    using DoTypeFunction = DoTypeFunctionImpl<TDefaultResult, void, TFunction, TArgs...>;
+template<typename TMemoryAllocator>
+struct AllocatorTraits
+{
+private:
+	template<typename TMemoryAllocator>
+	using GetVoidPointerType = typename TMemoryAllocator::VoidPointer;
+public:
 
 
-    template<typename TDefaultResult, 
-        template<typename...> class TFunction,
-        typename... TArgs>
-    using DoTypeFunctionResult = typename DoTypeFunction<TDefaultResult, TFunction, TArgs...>::Result;
+	using VoidPointer = DoTypeFunctionResult<ValueType*, GetVoidPointerType, TMemoryAllocator>;
+};
 
 } // end of air
 
-#endif // AIR_UTL_COMMONUTL_H_INCL
+#endif // AIR_MEMORY_H_INCL
 

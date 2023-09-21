@@ -1,8 +1,11 @@
 /*************************************************************************
  *                                                                       *
  * Air Game Engine                                                       *
- * Copyright (C) 2023 Marat Sungatullin (aka mrsung, aka graveman)  and  *
- * team: .                                                               *
+ * Copyright (C) 2023 Air Engine Team:									 *
+ * - Marat Sungatullin (aka mrsung, aka graveman);						 *
+ * - ssamjoel;                                                           *
+ * - CCleanerShot;														 *
+ * - CeNIEi.                                                             *
  * All rights reserved.  Email:                                          *
  *                                                                       *
  * This project is free software; you can redistribute it and/or         *
