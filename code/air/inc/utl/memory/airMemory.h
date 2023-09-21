@@ -42,20 +42,67 @@
 
 #include <memory>
 
+#include "platform/airBaseTypes.h"
+
 namespace air
 {
+	template <typename T>
+	class DefaultMemoryAllocator
+	{
+	public:
+		using VoidPointer = void*;
+		using ConstVoidPointer = const void*;
+		using SizeType = Size;
+		using DifferenceType = std::ptrdiff_t;
 
-template<typename TMemoryAllocator>
-struct AllocatorTraits
-{
-private:
+		DefaultAllocator() = default;
+
+		VoidPointer allocate(SizeType nBytes, Int32* pErrorCode = nullptr)
+		{
+			return VoidPointer();
+		}
+
+		void deallocate(VoidPointer p, Int32* pErrorCode = nullptr)
+		{
+
+		}
+
+		VoidPointer reallocate(VoidPointer pOld, SizeType nBytes, Int32* pErrorCode = nullptr)
+		{
+			return VoidPointer();
+		}
+	};
+
 	template<typename TMemoryAllocator>
-	using GetVoidPointerType = typename TMemoryAllocator::VoidPointer;
-public:
+	struct MemoryAllocatorTraits
+	{
+	private:
+		template<typename TMemoryAllocator>
+		using GetVoidPointerType = typename TMemoryAllocator::VoidPointer;
+
+		template<typename TMemoryAllocator>
+		using GetSizeType = typename TMemoryAllocator::SizeType;
+	public:
 
 
-	using VoidPointer = DoTypeFunctionResult<ValueType*, GetVoidPointerType, TMemoryAllocator>;
-};
+		using VoidPointer = DoTypeFunctionResult<void*, GetVoidPointerType, TMemoryAllocator>;
+		using SizeType = DoTypeFunctionResult<Size, GetSizeType, TMemoryAllocator>;
+
+		VoidPointer allocate(TMemoryAllocator& alcr, SizeType nBytes, Int32* pErrorCode = nullptr)
+		{
+			return VoidPointer();
+		}
+
+		void deallocate(TMemoryAllocator& alcr, VoidPointer p, Int32* pErrorCode = nullptr)
+		{
+
+		}
+
+		VoidPointer reallocate(TMemoryAllocator& alcr, VoidPointer pOld, SizeType nBytes, Int32* pErrorCode = nullptr)
+		{
+			return VoidPointer();
+		}
+	};
 
 } // end of air
 
